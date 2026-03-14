@@ -97,3 +97,51 @@ int main(void) {
     return 0;
 }
 
+## Programa em C – Preenchimento de Matriz
+
+Este programa em C permite que o usuário defina o tamanho de uma matriz e insira os valores de cada posição.
+
+### Como funciona:
+
+* O usuário informa a quantidade de linhas da matriz
+* O usuário informa a quantidade de colunas
+* O programa solicita os valores de cada posição da matriz
+* Por fim, a matriz digitada é exibida na tela
+
+**Nota:** Este exercício foi desenvolvido para praticar matrizes e estruturas de repetição aninhadas (`for`) na linguagem C.
+
+### Código:
+
+```c
+#include <stdio.h>
+int main(void) {
+
+    int matriz[10][10];
+    int linhas, colunas;
+    int i, j;
+
+    printf("Digite o numero de linhas: ");
+    scanf("%d", &linhas);
+
+    printf("Digite o numero de colunas: ");
+    scanf("%d", &colunas);
+
+    for(i = 0; i < linhas; i++){
+        for(j = 0; j < colunas; j++){
+            printf("Elemento [%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+    printf("\nMatriz digitada:\n");
+
+    for(i = 0; i < linhas; i++){
+        for(j = 0; j < colunas; j++){
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
