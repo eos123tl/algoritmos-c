@@ -53,3 +53,47 @@ int main(void) {
 
     return 0;
 }
+
+## Programa em C – Ordenação Bubble Sort
+
+Este programa em C ordena números utilizando o algoritmo **Bubble Sort**.
+
+O Bubble Sort é um algoritmo simples de ordenação que compara elementos vizinhos de um vetor e troca suas posições quando estão fora de ordem.
+
+### Como funciona:
+
+* O usuário digita 5 números
+* O algoritmo compara dois números vizinhos
+* Se o primeiro for maior que o segundo, eles trocam de posição
+* Esse processo se repete até que todos os números estejam ordenados
+
+**Nota:** Esse exercício foi desenvolvido para praticar vetores e estruturas de repetição (`for`) na linguagem C.
+
+### Código:
+
+```c
+#include <stdio.h>
+int main(void) {
+    int vet[5], i, j, temp;
+    printf("Digite 5 numeros:\n");
+    for(i = 0; i < 5; i++){
+        scanf("%d", &vet[i]);
+    }
+    for(i = 0; i < 4; i++){
+        for(j = 0; j < 4 - i; j++){
+            if(vet[j] > vet[j+1]){
+                temp = vet[j];
+                vet[j] = vet[j+1];
+                vet[j+1] = temp;
+            }
+        }
+    }
+    printf("Vetor ordenado:\n");
+
+    for(i = 0; i < 5; i++){
+        printf("%d ", vet[i]);
+    }
+
+    return 0;
+}
+
