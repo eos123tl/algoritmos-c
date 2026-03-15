@@ -145,3 +145,65 @@ int main(void) {
 }
 ```
 
+## Programa em C – Calculadora Simples
+
+Este programa em C funciona como uma calculadora simples que realiza operações matemáticas básicas.
+
+### Como funciona:
+
+* O usuário digita dois números
+* O usuário escolhe a operação desejada
+* O programa realiza a operação e exibe o resultado
+
+Operações disponíveis:
+
+1 - Soma
+2 - Subtração
+3 - Multiplicação
+4 - Divisão
+
+**Nota:** Este exercício foi desenvolvido para praticar estruturas condicionais utilizando `switch`.
+
+### Código:
+#include <stdio.h>
+int main() {
+
+    float a, b;
+    int op;
+
+    printf("Digite dois numeros: ");
+    scanf("%f %f", &a, &b);
+
+    printf("\nEscolha uma operacao:\n");
+    printf("1 - Soma\n");
+    printf("2 - Subtracao\n");
+    printf("3 - Multiplicacao\n");
+    printf("4 - Divisao\n");
+
+    scanf("%d", &op);
+
+    switch(op){
+
+        case 1:
+            printf("Resultado: %.2f\n", a + b);
+            break;
+
+        case 2:
+            printf("Resultado: %.2f\n", a - b);
+            break;
+
+        case 3:
+            printf("Resultado: %.2f\n", a * b);
+            break;
+
+        case 4:
+            printf("Resultado: %.2f\n", a / b);
+            break;
+
+        default:
+            printf("Opcao invalida\n");
+    }
+
+    return 0;
+}
+```
